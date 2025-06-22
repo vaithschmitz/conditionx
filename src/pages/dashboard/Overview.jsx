@@ -1,4 +1,3 @@
-import DashboardDebug from '../../components/DashboardDebug';
 
 export default function OverviewPage() {
     return (
@@ -21,7 +20,6 @@ export default function OverviewPage() {
             <p className="text-sm text-text-muted">How you're spending your training time.</p>
           </div>
         </div>
-        <DashboardDebug />
       </div>
     );
   }
