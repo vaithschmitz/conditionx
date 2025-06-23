@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 
-export default function MultiSelectDropdown({ label, options, selected, onChange }) {
+export default function MultiSelectDropdown({ label, options, selected, onChange, showLabel = true }) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -14,7 +14,7 @@ export default function MultiSelectDropdown({ label, options, selected, onChange
 
   return (
     <div className="relative">
-      <label className="block font-medium mb-1">{label}</label>
+      {showLabel && <label className="block font-medium mb-1">{label}</label>}
       <div
         onClick={() => setOpen((prev) => !prev)}
         className="w-full border rounded p-2 cursor-pointer bg-white"

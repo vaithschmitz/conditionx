@@ -12,6 +12,7 @@ const navItems = [
   { name: 'Conditioning', path: '/conditioning' },
   { name: 'Cardio', path: '/cardio' },
   { name: 'Recovery', path: '/recovery' },
+  { name: 'Session History', path: '/history' },
 ];
 
 export default function Navbar() {

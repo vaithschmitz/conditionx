@@ -11,6 +11,7 @@ import Conditioning from "../pages/dashboard/Conditioning";
 import Yoga from "../pages/dashboard/Yoga";
 import Cardio from "../pages/dashboard/Cardio";
 import Log from "../pages/dashboard/Log";
+import SessionHistory from "../pages/dashboard/SessionHistory";
 
 import NotFound from "../pages/NotFound";
 import ProtectedRoute from "./ProtectedRoute";
@@ -33,6 +34,7 @@ export default function AppRoutes() {
           <Route path="/yoga" element={<Yoga />} />
           <Route path="/cardio" element={<Cardio />} />
           <Route path="/log" element={<Log />} />
+          <Route path="/history" element={<SessionHistory />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
