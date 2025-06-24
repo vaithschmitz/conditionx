@@ -10,7 +10,7 @@ export default function Yoga() {
   return (
     <div>
       <h2>Yoga</h2>
-      <PieChart data={yogaData} width={600} height={400} />
+
     </div>
   );
 }
