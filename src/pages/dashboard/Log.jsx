@@ -68,7 +68,8 @@ const runningTypes = ['Trail','Road','Treadmill'];
 const swimmingTypes = ['Pool','Open Water'];
 
 // Helper: build dropdown 1–10
-const scaleOptions = Array.from({ length: 10 }, (_, i) => ({ value:`${i+1}`, label:`${i+1}` }));
+const scaleOptions = [{ value: '', label: 'Select value' }, ...Array.from({ length: 10 }, (_, i) => ({ value: `${i + 1}`, label: `${i + 1}` }))];
+
 
 export default function LogActivity() {
   const { session } = useAuth();
@@ -189,7 +190,8 @@ export default function LogActivity() {
       );
       
       
-  
+      console.log('🚨 Submitting Data:', cleanData);
+
     const { error } = await supabase.from('workouts').insert([
       { user_id: session.user.id, ...cleanData }
     ]);
